@@ -28,7 +28,7 @@ function KeyGenerator(bitSize, baseEncoding) {
   this.bitSize = bitSize;
   this.baseEncoding = baseEncoding;
   this.base = baseEncoding.length;
-  this.keyLength = Math.ceil(bitSize / Math.log2(this.base));
+  this.keyLength = Math.ceil(bitSize / (Math.log(this.base) / Math.log(2)));
 
   this._bytes = bitSize / 8;
 }
